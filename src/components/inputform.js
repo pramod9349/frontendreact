@@ -79,7 +79,6 @@ function downloadfile(){
     document.getElementById("downparent").style.display = "block";
 
 
-    
 }
 
 function downloadfilefun(){
@@ -94,17 +93,17 @@ function defaultvalue(){
    // resetdata()    ///clear all data from input box
     document.getElementById("Family_Legal_StatusDeadAlive_Counter").value=5
     document.getElementById("SimpleFamilyMembers_Counter").value=5
-    document.getElementById("Legal_Status_DeadAlive_Counter").value=10
-    document.getElementById("PriorityCountryCode_Counter").value=5
-    document.getElementById("Legal_Status_Current_Counter").value=15
-    document.getElementById("Is_Litigated_Counter").value=5
+    document.getElementById("Legal_Status_DeadAlive_Counter").value=15
+    document.getElementById("PriorityCountryCode_Counter").value=10
+    //document.getElementById("Legal_Status_Current_Counter").value=15
+    document.getElementById("Is_Litigated_Counter").value=10
     document.getElementById("FilingApplicationDate_Counter").value=5
-    document.getElementById("First_Claim_Counter").value=15
-    document.getElementById("NumbersOfIndependentClaims_Counter").value=5
+    //document.getElementById("First_Claim_Counter").value=15
+    document.getElementById("NumbersOfIndependentClaims_Counter").value=10
     document.getElementById("ForwardCitationsIndividual_Counter").value=10
-    document.getElementById("Is_Opposed_Counter").value=0
-    document.getElementById("EstimatedExpiryDate_Counter").value=5
-    document.getElementById("Litigation_counter").value=15
+    //document.getElementById("Is_Opposed_Counter").value=0
+    document.getElementById("EstimatedExpiryDate_Counter").value=10
+    document.getElementById("Litigation_counter").value=20
 }
 
 function resetdata(){
@@ -112,13 +111,13 @@ function resetdata(){
     document.getElementById("SimpleFamilyMembers_Counter").value=""
     document.getElementById("Legal_Status_DeadAlive_Counter").value=""
     document.getElementById("PriorityCountryCode_Counter").value=""
-    document.getElementById("Legal_Status_Current_Counter").value=""
+    //document.getElementById("Legal_Status_Current_Counter").value=""
     document.getElementById("Is_Litigated_Counter").value=""
     document.getElementById("FilingApplicationDate_Counter").value=""
-    document.getElementById("First_Claim_Counter").value=""
+    //document.getElementById("First_Claim_Counter").value=""
     document.getElementById("NumbersOfIndependentClaims_Counter").value=""
     document.getElementById("ForwardCitationsIndividual_Counter").value=""
-    document.getElementById("Is_Opposed_Counter").value=""
+    //document.getElementById("Is_Opposed_Counter").value=""
     document.getElementById("EstimatedExpiryDate_Counter").value=""
     document.getElementById("Litigation_counter").value=""
 }
@@ -183,20 +182,20 @@ function MyApp() {
         let SimpleFamilyMembers_Counter =Number(document.getElementById("SimpleFamilyMembers_Counter").value)
         let Legal_Status_DeadAlive_Counter =Number(document.getElementById("Legal_Status_DeadAlive_Counter").value)
         let PriorityCountryCode_Counter =Number(document.getElementById("PriorityCountryCode_Counter").value)
-        let Legal_Status_Current_Counter =Number(document.getElementById("Legal_Status_Current_Counter").value)
+        //let Legal_Status_Current_Counter =Number(document.getElementById("Legal_Status_Current_Counter").value)
         let Is_Litigated_Counter =Number(document.getElementById("Is_Litigated_Counter").value)
         let FilingApplicationDate_Counter =Number(document.getElementById("FilingApplicationDate_Counter").value)
-        let First_Claim_Counter =Number(document.getElementById("First_Claim_Counter").value)
+        //let First_Claim_Counter =Number(document.getElementById("First_Claim_Counter").value)
         let NumbersOfIndependentClaims_Counter =Number(document.getElementById("NumbersOfIndependentClaims_Counter").value)
         let ForwardCitationsIndividual_Counter =Number(document.getElementById("ForwardCitationsIndividual_Counter").value)
-        let Is_Opposed_Counter =Number(document.getElementById("Is_Opposed_Counter").value)
+        //let Is_Opposed_Counter =Number(document.getElementById("Is_Opposed_Counter").value)
         let EstimatedExpiryDate_Counter =Number(document.getElementById("EstimatedExpiryDate_Counter").value)
         let Litigation_counter =Number(document.getElementById("Litigation_counter").value)
     
         let sumofallinputbox=(Family_Legal_StatusDeadAlive_Counter+SimpleFamilyMembers_Counter+Legal_Status_DeadAlive_Counter
-         +PriorityCountryCode_Counter+Legal_Status_Current_Counter+Is_Litigated_Counter+
-         FilingApplicationDate_Counter+First_Claim_Counter+NumbersOfIndependentClaims_Counter+
-         ForwardCitationsIndividual_Counter+Is_Opposed_Counter+EstimatedExpiryDate_Counter+Litigation_counter)
+         +PriorityCountryCode_Counter+Is_Litigated_Counter+
+         FilingApplicationDate_Counter+NumbersOfIndependentClaims_Counter+
+         ForwardCitationsIndividual_Counter+EstimatedExpiryDate_Counter+Litigation_counter)
 
         if(validationscore(sumofallinputbox)!==true){
             //don't cal upload function
@@ -245,13 +244,13 @@ function MyApp() {
         let SimpleFamilyMembers_Counter =Number(document.getElementById("SimpleFamilyMembers_Counter").value)
         let Legal_Status_DeadAlive_Counter =Number(document.getElementById("Legal_Status_DeadAlive_Counter").value)
         let PriorityCountryCode_Counter =Number(document.getElementById("PriorityCountryCode_Counter").value)
-        let Legal_Status_Current_Counter =Number(document.getElementById("Legal_Status_Current_Counter").value)
+        //let Legal_Status_Current_Counter =Number(document.getElementById("Legal_Status_Current_Counter").value)
         let Is_Litigated_Counter =Number(document.getElementById("Is_Litigated_Counter").value)
         let FilingApplicationDate_Counter =Number(document.getElementById("FilingApplicationDate_Counter").value)
-        let First_Claim_Counter =Number(document.getElementById("First_Claim_Counter").value)
+        //let First_Claim_Counter =Number(document.getElementById("First_Claim_Counter").value)
         let NumbersOfIndependentClaims_Counter =Number(document.getElementById("NumbersOfIndependentClaims_Counter").value)
         let ForwardCitationsIndividual_Counter =Number(document.getElementById("ForwardCitationsIndividual_Counter").value)
-        let Is_Opposed_Counter =Number(document.getElementById("Is_Opposed_Counter").value)
+        //let Is_Opposed_Counter =Number(document.getElementById("Is_Opposed_Counter").value)
         let EstimatedExpiryDate_Counter =Number(document.getElementById("EstimatedExpiryDate_Counter").value)
         let Litigation_counter =Number(document.getElementById("Litigation_counter").value)
     
@@ -262,13 +261,13 @@ function MyApp() {
         formData.append('SimpleFamilyMembers_Counter', SimpleFamilyMembers_Counter)
         formData.append('Legal_Status_DeadAlive_Counter', Legal_Status_DeadAlive_Counter)
         formData.append('PriorityCountryCode_Counter', PriorityCountryCode_Counter)
-        formData.append('Legal_Status_Current_Counter', Legal_Status_Current_Counter)
+        //formData.append('Legal_Status_Current_Counter', Legal_Status_Current_Counter)
         formData.append('Is_Litigated_Counter', Is_Litigated_Counter)
-        formData.append('First_Claim_Counter', First_Claim_Counter)
+        //formData.append('First_Claim_Counter', First_Claim_Counter)
         formData.append('FilingApplicationDate_Counter', FilingApplicationDate_Counter)
         formData.append('NumbersOfIndependentClaims_Counter', NumbersOfIndependentClaims_Counter)
         formData.append('ForwardCitationsIndividual_Counter', ForwardCitationsIndividual_Counter)
-        formData.append('Is_Opposed_Counter', Is_Opposed_Counter)
+        //formData.append('Is_Opposed_Counter', Is_Opposed_Counter)
         formData.append('EstimatedExpiryDate_Counter', EstimatedExpiryDate_Counter)
         formData.append('Litigation_counter', Litigation_counter)
         
@@ -286,7 +285,8 @@ function MyApp() {
                 }
             }).then(res => {    
                 console.log("output data is") 
-                console.log(res.data) 
+                //alert(res.data) 
+                //alert(res)
                 console.log(typeof res.data)
                 var mainarray = [];
 
@@ -295,13 +295,24 @@ function MyApp() {
                     console.log("a is")
                     //console.log((res.data[a]['Average Weightage']).toFixed(2))
                     console.log(res.data[a]['Patent No'])
+                    if(res.data[a]['Patent No'] === undefined)
+                    {
+                        //console.log("a is undefined")
+                        swal({
+                            title: "Incorrect data format !!!",
+                            text: "Please check the data and try again !!!",
+                            
+                        }).then(function() {
+                            window.location.reload();
+                        });
+                        return
+                    }
                     console.log(res.data[a]['Average Weightage'])
                     console.log(res.data[a]['Final Status'])
                     thisarray.push(res.data[a]['Patent No'])
                     thisarray.push((res.data[a]['Average Weightage']).toFixed(2))
                     thisarray.push(res.data[a]['Final Status'])
                     mainarray.push(thisarray);
-                    
                 }
                 console.log(mainarray)
 
@@ -373,14 +384,15 @@ function MyApp() {
                 console.log("in error")
                 console.log(err)
                 
-   
-    swal({
-        title: "Incorrect file format !!!",
-        text: "something went wrong please check the file and try again !!!",
+                swal({
+                    title: "Incorrect file format !!!",
+                    text: "something went wrong please check the file and try again !!!",
+                    
+                }).then(function() {
+                    window.location.reload();
+                });
         
-    }).then(function() {
-        window.location.reload();
-    });
+    
 
             })
         }
@@ -452,9 +464,7 @@ function MyApp() {
                     </nav>
                 </div>
             </div>
-
-    
-         
+            
         </div>
             <div id ='mainpage' className="flex items-center justify-center " >
                 <div className="xl:w-10/12 w-full px-8 py-4">
@@ -552,57 +562,61 @@ function MyApp() {
                                         <input type="number" id="Legal_Status_DeadAlive_Counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
                                     </div>
                                     <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
-                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="altPhone">Family member in Litigation</label>
+                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="altPhone">Active in Designated States</label>
                                         <input type="number" id="Is_Litigated_Counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadowborder-gray-200 focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
                                     </div>
                                     
                                 </div>
                                 <div className="md:flex items-center  mt-4">
                                     <div className="md:w-64">
-                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail">Priority Country Code</label>
-                                        <input type="number" id="PriorityCountryCode_Counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
+                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail">Publication Country(Priority Country- US/EP/CN)</label>
+                                        <input type="number" id="PriorityCountryCode_Counter"  className="w-full p-3 mt-2 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
                                     </div>
-                                    <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
+                                    {/* <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
                                         <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="altPhone"> Grant/ Published application</label>
                                         <input type="number" id="Legal_Status_Current_Counter"  className="w-full p-3 mt-3 bg-gray-100 border border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
+                                    </div> */}
+
+                                    <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
+                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail"> Is Litigated</label>
+                                        <input type="number" id="Litigation_counter"  className="w-full p-3 mt-8 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
                                     </div>
+
+
                                     <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
                                         <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="altPhone">No. of Independent Claims</label>
-                                        <input type="number" id="NumbersOfIndependentClaims_Counter"  className="w-full p-3 mt-3 bg-gray-100 border border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
+                                        <input type="number" id="NumbersOfIndependentClaims_Counter"  className="w-full p-3 mt-8 bg-gray-100 border border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
                                     </div>
-                                    <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
+                                    {/* <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
                                         <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="altPhone">First claim word count</label>
                                         <input type="number" id="First_Claim_Counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
+                                    </div> */}
+
+                                    <div div className="md:w-64 md:ml-12 md:mt-0 mt-4">
+                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail">Remaining Life</label>
+                                        <input type="number" id="EstimatedExpiryDate_Counter"  className="w-full p-3 mt-8 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800 " />
                                     </div>
                                     
                                 </div>
                                 <div className="md:flex items-center  mt-4">
-                                    <div className="md:w-64">
-                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail">Prosecution Period</label>
-                                        <input type="number" id="FilingApplicationDate_Counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
+                                    <div className="md:w-64 pr-6">
+                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail">Backward Citation Count</label>
+                                        <input type="number" id="FilingApplicationDate_Counter"  className="w-full p-3 mt-8 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
                                     </div>
-                                    <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
+                                    {/* <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
                                         <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="altPhone">Prior art for Litigation</label>
                                         <input type="number" id="Is_Opposed_Counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
-                                    </div>
-                                    <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
-                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail"> Forward Citation Count</label>
+                                    </div> */}
+                                    <div className="md:w-64 md:ml-4 md:mt-0 mt-4 pr-4">
+                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail"> No. of Forward Citations (Individual)</label>
                                         <input type="number" id="ForwardCitationsIndividual_Counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800"/>
                                     </div>
 
-                                    <div className="md:w-64 md:ml-12 md:mt-0 mt-4">
-                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail"> Is Litigation</label>
-                                        <input type="number" id="Litigation_counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" />
-                                    </div>
-                                   
                                     
                                 </div>
 
                                 <div className="md:flex items-left  mt-4">
-                                    <div className="md:w-78">
-                                        <label className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2" id="recoverEmail">Remaining Life</label>
-                                        <input type="number" id="EstimatedExpiryDate_Counter"  className="w-full p-3 mt-3 bg-gray-100 border rounded border-green-400 rounded border shadow focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800 " />
-                                    </div>
+                                    
                                     
                                     
                                     <div className="w-full md:mt-0 mt-4 pt-8 flex justify-end">
