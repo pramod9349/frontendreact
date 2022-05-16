@@ -58,7 +58,7 @@ function validationscore(scoreval){
 }
 
 function getdata(){
-    axios.get('http://localhost:4500/getdata/').then(res => {    
+    axios.get('http://18.218.36.25/getdata/').then(res => {    
     console.log("output data is etdata")
     console.log(res)
    
