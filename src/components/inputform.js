@@ -58,7 +58,7 @@ function validationscore(scoreval){
 }
 
 function getdata(){
-    axios.get('http://18.218.36.25/getdata/').then(res => {    
+    axios.get('http://localhost:4500/getdata/').then(res => {    
     console.log("output data is etdata")
     console.log(res)
    
@@ -272,7 +272,7 @@ function MyApp() {
         formData.append('Litigation_counter', Litigation_counter)
         
 
-            axios.post('http://localhost:4500/upload/',formData, {
+            axios.post('http://18.218.36.25/upload/',formData, {
             //         headers:
             //     {
             //         'Content-Disposition': "attachment; filename=template.xlsx",
