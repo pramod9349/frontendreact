@@ -13,13 +13,13 @@ $.DataTable = require('datatables.net');
 
 function changelastsatatus(){
     document.getElementById("image4-changetext").className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-white"
-    document.getElementById("step4-ing").src = "https://i.ibb.co/DwNs7zG/Steps.png";
+    document.getElementById("step4-ing").src = "Steps.png";
 
 }
 
 function finaldownloadfile(){
     console.log("final function called")
-    document.getElementById("step4-ing").src = "https://i.ibb.co/DwNs7zG/Steps.png";
+    document.getElementById("step4-ing").src = "Steps.png";
     document.getElementById("image4-changetext").className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-white"
     
 }
@@ -72,7 +72,7 @@ function getdata(){
 
 function downloadfile(){    
     document.getElementById("image3-changetext").className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-white"
-    document.getElementById("step3-ing").src = "https://i.ibb.co/DwNs7zG/Steps.png";
+    document.getElementById("step3-ing").src = "Steps.png";
     document.getElementById("loadingpage").style.display = "none";
     document.getElementById("downlo").style.display = "block";
     document.getElementById("homepage").style.display = "block";
@@ -139,9 +139,9 @@ function checkfile(){
 }
 
 function secondpagefunction(){
-    document.getElementById("step2-ing").src = "https://i.ibb.co/DwNs7zG/Steps.png";
+    document.getElementById("step2-ing").src = "Steps.png";
     document.getElementById("image2-changetext").className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-white"
-    document.getElementById("step3-ing").src = "https://i.ibb.co/wNZ4nzy/Steps2.png";
+    document.getElementById("step3-ing").src = "Steps2.png";
     document.getElementById("all-category").style.display = "none";
     //document.getElementById("all-category").style.display = "none";loadingpage
     document.getElementById("loadingpage").style.display = "block";
@@ -152,8 +152,8 @@ function secondpagefunction(){
 function changepage(){
     
     console.log("change page called")
-    document.getElementById("step1-ing").src = "https://i.ibb.co/DwNs7zG/Steps.png";
-    document.getElementById("step2-ing").src = "https://i.ibb.co/wNZ4nzy/Steps2.png";
+    document.getElementById("step1-ing").src = "Steps.png";
+    document.getElementById("step2-ing").src = "Steps2.png";     
     document.getElementById("image1-changetext").className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-white"
     
     //changing page 
@@ -393,7 +393,6 @@ function MyApp() {
                 });
         
     
-
             })
         }
 
@@ -470,28 +469,28 @@ function MyApp() {
                 <div className="xl:w-10/12 w-full px-8 py-4">
                     <div className="bg-gray-100 py-12 flex flex-wrap items-center justify-center">
                         <div className="w-52 h-16 relative md:mt-0 mt-4">
-                            <img id ='step1-ing' src="https://i.ibb.co/wNZ4nzy/Steps2.png" alt="step1" className="w-full h-full" />
+                            <img id ='step1-ing' src="Steps2.png" alt="step1" className="w-full h-full" />
                             <div id = 'image1-changetext'className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-indigo-800">
                                 <p className="w-full text-sm font-medium leading-4 ">Choose File</p>
                                 <p className="w-full text-xs mt-1 leading-none ">Select Input File</p>
                             </div>
                         </div>
                         <div className="w-52 h-16 relative md:mt-0 mt-4">
-                            <img id ='step2-ing' src="https://i.ibb.co/c2k4Gbr/Steps3.png" alt="step2" className="w-full h-full" />
+                            <img id ='step2-ing' src="Steps3.png" alt="step2" className="w-full h-full" />
                             <div id = 'image2-changetext' className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-gray-700">
                                 <p className="w-full text-sm font-medium leading-4 ">Configure Weightage</p>
                                 <p className="w-full text-xs mt-1 leading-none ">Customize Ranking</p>
                             </div>
                         </div>
                         <div className="w-52 h-16 relative md:mt-0 mt-4">
-                            <img id ='step3-ing' src="https://i.ibb.co/c2k4Gbr/Steps3.png" alt="step3" className="w-full h-full" />
+                            <img id ='step3-ing' src="Steps3.png" alt="step3" className="w-full h-full" />
                             <div id = 'image3-changetext' className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-gray-700">
                                 <p className="w-full text-sm font-medium leading-4 ">Validation</p>
                                 <p className="w-full text-xs mt-1 leading-none ">Check Input file</p>
                             </div>
                         </div>
                         <div className="w-52 h-16 relative lg:mt-0 mt-4">
-                            <img id ='step4-ing' src="https://i.ibb.co/XCdjrhm/Steps4.png" alt="step4" className="w-full h-full" />
+                            <img id ='step4-ing' src="Steps4.png" alt="step4" className="w-full h-full" />
                             <div id = 'image4-changetext' className="absolute w-full flex flex-col px-6 items-center justify-center inset-0 m-0 text-gray-700">
                                 <p className="w-full text-sm font-medium leading-4 ">Download Output</p>
                                 <p className="w-full text-xs mt-1 leading-none ">Ranked Patents</p>
@@ -708,7 +707,7 @@ function MyApp() {
 <table id="example"  ref={tableRef} class="display" width="100%"  ></table>
 
 <button id = 'downloadingfile'  className="mx-2 my-2 flex items-center bg-red-400 transition duration-150 ease-in-out red-400 rounded rounded border border-green-300 text-white pl-3 pr-6 py-2 text-sm font-weight: 600;"onClick={downloadfilefun} style={{display:"none"}} >
-      <svg className="fill-current w-full  h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+      <svg className="fill-current w-full  h-5 mr-2"  viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
       <span>Click to Download File</span>
          </button> 
 
