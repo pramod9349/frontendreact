@@ -316,7 +316,7 @@ function MyApp() {
                 }
                 console.log(mainarray)
 
-                var CsvString = "Patent No,Average Weightage,Final Status";
+                var CsvString = "Record Number,Patent Strength Score,Rank";
                 CsvString += "\r\n";
                 mainarray.forEach(function(RowItem, RowIndex) {
                   RowItem.forEach(function(ColItem, ColIndex) {
@@ -353,9 +353,9 @@ function MyApp() {
                         'copy', 'excel', 'pdf'
                     ],
                     columns: [
-                        { title: "Patent" },
-                        { title: "Weightage" },
-                        { title: "Status" }
+                        { title: "Record Number" },
+                        { title: "Patent Strength Score" },
+                        { title: "Rank" }
                         
                     ]
                 } );
